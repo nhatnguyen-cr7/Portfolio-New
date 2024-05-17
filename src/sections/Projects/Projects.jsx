@@ -1,8 +1,8 @@
 import styles from './ProjectsStyles.module.css';
-import viberr from '../../assets/viberr.png';
-import freshBurger from '../../assets/fresh-burger.png';
-import hipsster from '../../assets/hipsster.png';
-import fitLift from '../../assets/fitlift.png';
+import viberr from '../../assets/1.png';
+import freshBurger from '../../assets/2.png';
+import hipsster from '../../assets/3.png';
+import fitLift from '../../assets/4.png';
 import ProjectCard from '../../common/ProjectCard';
 
 function Projects() {

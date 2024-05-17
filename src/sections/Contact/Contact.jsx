@@ -1,17 +1,35 @@
+import { useRef } from 'react';
+import emailjs from 'emailjs-com';
 import styles from './ContactStyles.module.css';
 
 function Contact() {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_i19jc0k', 'template_x86e7sb', form.current, 'pZwxU5BEEEMtwcmNr')
+      .then((result) => {
+          console.log(result.text);
+          alert('Message sent successfully!');
+          form.current.reset();
+      }, (error) => {
+          console.log(error.text);
+          alert('Failed to send the message, please try again.');
+      });
+  };
+
   return (
     <section id="contact" className={styles.container}>
       <h1 className="sectionTitle">Contact</h1>
-      <form action="">
+      <form ref={form} onSubmit={sendEmail}>
         <div className="formGroup">
           <label htmlFor="name" hidden>
             Name
           </label>
           <input
             type="text"
-            name="name"
+            name="user_name"
             id="name"
             placeholder="Name"
             required
@@ -22,8 +40,8 @@ function Contact() {
             Email
           </label>
           <input
-            type="text"
-            name="email"
+            type="email"
+            name="user_email"
             id="email"
             placeholder="Email"
             required
