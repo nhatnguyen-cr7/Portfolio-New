@@ -40,7 +40,7 @@ function Hero() {
         </h1>
         <h2>Frontend Developer</h2>
         <span>
-          <a href="https://twitter.com/" target="_blank">
+          <a href="https://www.facebook.com/profile.php?id=100019728216638&locale=vi_VN" target="_blank">
             <img src={twitterIcon} alt="Twitter icon" />
           </a>
           <a href="https://github.com/nhatnguyen-cr7" target="_blank">
